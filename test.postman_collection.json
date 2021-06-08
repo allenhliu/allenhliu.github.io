@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "d3ae4f9f-44fb-4063-9915-1b0819ddc504",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://wj.qq.com/api/v2/orgs?admin=false&_={{$timestamp}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
+					}
+				],
+				"url": {
+					"raw": "https://wj.qq.com/api/v2/orgs?admin=false&_={{$timestamp}}",
+					"protocol": "https",
+					"host": [
+						"wj",
+						"qq",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"orgs"
+					],
+					"query": [
+						{
+							"key": "admin",
+							"value": "false"
+						},
+						{
+							"key": "_",
+							"value": "{{$timestamp}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
