@@ -36,8 +36,9 @@ jobs:
       - name: Run API Tests
         id: run-newman  
         uses: anthonyvscode/newman-action@v1.1
-        #with:
-          #collection: test.postman_collection.json
+        with:
+          collection: test.postman_collection.json
+                      test2.postman_collection.json
       - name: newman run testcase
         run: newman run test.postman_collection.json
              newman run test2.postman_collection.json
