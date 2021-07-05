@@ -37,7 +37,7 @@ jobs:
         id: run-newman  
         uses: anthonyvscode/newman-action@v1.1
         with:
-          collection: test.postman_collection.json && test2.postman_collection.json
+          collection: test.postman_collection.json
       - name: newman run testcase
         run: newman run test.postman_collection.json
       - name: newman run testcase2
