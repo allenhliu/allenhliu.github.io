@@ -31,7 +31,7 @@ jobs:
         with:
           collection: test.postman_collection.json
       - name: newman run testcase
-        run: newman run test.postman_collection.json
+        run: newman run test.postman_collection.json test2.postman_collection.json
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
